@@ -1,0 +1,22 @@
+<div class="main-background-image">
+<div class="page-wrapper" id="new_movie" tabindex="-1" role="dialog">
+  <div class="page-dialog page-dialog-centered" role="document">
+    <div class="main-content">
+      <div class="header">
+        <h2 class="title">Add a movie to your <strong><%= @list.name %></strong> list</h2>
+        <button type="button" class="btn-ghost" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="main-body">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "slect2" } } %>
+          <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
+      </div>
+      <div class="page-footer">
+          <%= f.submit "Add movie", class: "btn-ghost" %>
+        <% end %>
+        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

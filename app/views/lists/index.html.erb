@@ -1,0 +1,19 @@
+<div class="homepage-background-theatre">
+ <div class="container">
+   <div class="list-index-wrapper">
+     <h2>My Lists</h2>
+      <a href=''>
+    <% @lists.each do |list| %>
+        <%= link_to list_path(list) do %>
+            <%= list.name %>
+        <% end %>
+    <% end %>
+</a>
+  </div>
+    <div class="button-wrapper">
+         <div><%= link_to 'Create a movie list', new_list_path%></div>
+  </div>
+
+
+ </div>
+</div>

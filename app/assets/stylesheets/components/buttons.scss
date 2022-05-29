@@ -1,0 +1,28 @@
+.button-wrapper a {
+  text-decoration: none;
+  background-color: black;
+  font-family: 'Source Serif 4',serif;
+  font-size: 20px;
+  color: white;
+  border: 1px solid white;
+  padding:5px;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+  width: 220px;
+  height: 60px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -4px -4px 10px rgba(19, 19, 19, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 10px rgba(19, 19, 19, 0.5),
+    4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-wrapper a:hover {
+ opacity: 1;
+ transform: scale(1.2);
+}
