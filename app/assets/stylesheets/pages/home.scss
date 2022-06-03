@@ -21,9 +21,10 @@
 }
 .list-index-wrapper {
   padding-top: 5px;
+  padding-left: 20px;
   display: block;
-  width: 200px !important;
-  height:300px !important;
+  width: 300px !important;
+  height: 250px !important;
   justify-content: end;
   align-items: center;
   align-self:flex-end;
@@ -34,6 +35,10 @@
   opacity: 0.6;
 
 }
+.list-index-wrapper:hover {
+  opacity: 1;
+}
+
 .list-index-wrapper a {
   text-decoration: none;
   color: white !important;
@@ -41,12 +46,19 @@
   font-size: 20px;
   display: flex;
   text-align: center;
+  align-items: center;
   padding: 5px;
 
+
 }
+.list-index-wrapper a:hover {
+  transform: scale(1.1);
+
+}
+
 .button-wrapper {
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 120px;
   width: 280px;
   height: 80px;
   box-sizing: border-box;
