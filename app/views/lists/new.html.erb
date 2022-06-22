@@ -1,5 +1,11 @@
+ <div class="create-background">
+  <div class="create-container">
+   <div class="create-box">
  <h3>Create a new list</h3>
         <%= simple_form_for @list do |f| %>
-          <%= f.input :name, placeholder: 'Comedy' %>
-          <%= f.submit class: 'btn-ghost' %>
+           <div class="input-label"><%= f.input :name, label:false, placeholder: 'Comedy' %></div>
+          <%= f.submit class: 'create-button' %>
         <% end %>
+      </div>
+  </div>
+</div>
