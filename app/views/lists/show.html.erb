@@ -1,24 +1,32 @@
+
 <h1><%= @list.name %></h1>
 <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
 <div class="container mb-5">
-  <div class="d-flex justify-content-between my-4">
+
     <span class="mb-2 d-block"><small><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></small></span>
     <div>
       <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_movie_modal"><%=link_to 'add a movie', new_list_bookmark_path(@list)%>
       </button>
 
       <%= link_to 'delete list', list_path(@list) %>
+   <div class="card-container">
 
-     <% @list.movies.each do |movie| %>
-     <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-
-        <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %>
-
-          <strong><%= movie.title %><%= movie.rating %></strong>
+        <% @list.movies.each do |movie| %>
+        <div class="card">
+          <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+           <h1><%= movie.title %></h1>
+        <%= image_tag movie.poster_url, height: 300, width:520, crop: :fill,alt: movie.title, class: 'movie-img' %>
+           <div class="movie-description">
           <%= movie.overview %>
-           <div>
+          <h2>Comment:</h2>
            <%= bookmark.comment %>
+           </div>
+          <div class="delete-button">
+          <a href="#" ><%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></a>
           </div>
-           <%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
-
+        </div>
     <% end %>
+
+     </div>
+     </div>
+</div>

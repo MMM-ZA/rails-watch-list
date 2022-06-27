@@ -3,6 +3,7 @@
    <div class="create-box">
  <h3>Create a new list</h3>
         <%= simple_form_for @list do |f| %>
+        <p>List Name</p>
            <div class="input-label"><%= f.input :name, label:false, placeholder: 'Comedy' %></div>
           <%= f.submit class: 'create-button' %>
         <% end %>

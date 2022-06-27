@@ -2,7 +2,7 @@
   text-decoration: none;
   background-color: black;
   font-family: 'Source Serif 4',serif;
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   border: 1px solid white;
   padding:5px;
@@ -39,9 +39,25 @@
   font-weight: medium;
   transition: opacity 0.3s ease;
   font-family: 'Source Serif 4', serif;
-  margin-left: 30px;
+
 }
 .create-button:hover {
   opacity: 1;
   transform: scale(1.2);
+}
+.delete-button a{
+  display: block;
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: .3s ease-out;
+  font-family: 'Source Serif 4', serif;
+  font-weight: medium;
+
+
+    &:hover {
+      background-color: lighten(grey, 10%);
+    }
 }
