@@ -1,14 +1,19 @@
+<div class=show-background>
 
-<h1><%= @list.name %></h1>
-<span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
-<div class="container mb-5">
 
     <span class="mb-2 d-block"><small><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></small></span>
-    <div>
-      <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_movie_modal"><%=link_to 'add a movie', new_list_bookmark_path(@list)%>
+    <div class="list-actions">
+    <div class="header-wrapper">
+       <h1><%= @list.name %></h1>
+   </div>
+    <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
+
+      <button type="button" class="btn btn-add" data-bs-toggle="modal" data-bs-target="#new_movie_modal"><%=link_to 'add a movie', new_list_bookmark_path(@list)%>
       </button>
 
-      <%= link_to 'delete list', list_path(@list) %>
+       <button type="button" class="btn btn-delete"><%= link_to 'delete list', list_path(@list) %></button>
+    </div>
+
    <div class="card-container">
 
         <% @list.movies.each do |movie| %>
@@ -22,11 +27,11 @@
            <%= bookmark.comment %>
            </div>
           <div class="delete-button">
-          <a href="#" ><%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %></a>
+          <%= link_to 'delete', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %>
           </div>
         </div>
     <% end %>
 
      </div>
-     </div>
+
 </div>
