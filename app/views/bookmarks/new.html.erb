@@ -4,18 +4,20 @@
     <div class="main-content">
       <div class="header">
         <h2 class="title">Add a movie to your <strong><%= @list.name %></strong> list</h2>
-        <button type="button" class="btn-ghost" data-bs-dismiss="modal" aria-label="Close"></button>
+        <%# <button type="button" class="btn-ghost" data-bs-dismiss="modal" aria-label="Close"></button> %>
       </div>
+      <div class="add-movie-card">
       <div class="main-body">
         <%= simple_form_for [@list, @bookmark] do |f| %>
-          <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "slect2" } } %>
-          <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
+         <div class="movie-dropdown"><%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { data: { controller: "slect2" } } %></div>
+         <div class="comment-box"><%= f.input :comment, placeholder: "Enter a comment about the movie" %></div>
       </div>
       <div class="page-footer">
-          <%= f.submit "Add movie", class: "btn-ghost" %>
+          <%= f.submit "Add movie", class: "btn-add-movie" %>
         <% end %>
-        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-back" data-bs-dismiss="modal"><%= link_to 'Back', list_path(@list)%></button>
       </div>
+       </div>
     </div>
   </div>
 </div>

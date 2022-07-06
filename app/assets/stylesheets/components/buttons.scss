@@ -100,3 +100,46 @@
   text-decoration: none;
   color: white;
 }
+
+.btn-back {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 8px 24px;
+  width: 130px;
+  height: 40px;
+  font-weight: medium;
+  transition: opacity 0.3s ease;
+  font-family: 'Source Serif 4', serif;
+  margin-left: 8px;
+}
+.btn-back:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.btn-back a {
+  text-decoration: none;
+  color: white;
+}
+.btn-add-movie {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 8px 24px;
+  width: 130px;
+  height: 40px;
+  font-weight: medium;
+  transition: opacity 0.3s ease;
+  font-family: 'Source Serif 4', serif;
+}
+
+.btn-add:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.btn-add-movie a {
+  text-decoration: none;
+  color: white;
+}
