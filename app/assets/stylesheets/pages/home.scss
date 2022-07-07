@@ -104,11 +104,12 @@ position: absolute;
 }
 .create-container h3 {
   font-family: 'Source Serif 4', serif;
-  font-size: 14pt;
   color: white;
   padding-bottom: 25px;
   padding-top: 14px;
   padding-left: 50px;
+  text-shadow: 1px 1px 3px rgba(228, 222, 222, 0.2);
+  font-size: 32px;
 }
 
 .input-label {
@@ -120,23 +121,22 @@ position: absolute;
   padding-top: 5px;
   padding-left: 20px;
   display: block;
-  width: 320px !important;
-  height: 270px !important;
+  width: 400px !important;
+  height: 350px !important;
   align-items: center;
   text-decoration: none;
   background-color: black;
   border: 1px solid white;
-  opacity: 0.9;
-  position: absolute;
+  opacity: 0.7;
 }
 .create-box p {
   color: white;
   font-family: 'Source Serif 4', serif;
-  font-size: 12pt;
+  font-size: 16pt;
 }
 //show page (bookmarked movies)
 .show-background{
-  background-image: url(https://images.unsplash.com/photo-1578593139775-971441c3c518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1190&q=80);
+  background-image: url(https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80);
   background-size: cover;
   min-height: 100vh;
 }
@@ -184,6 +184,7 @@ position: absolute;
 }
 .movie-img {
  max-width: 100%;
+
 }
 .movie-description {
   padding: .5rem;
@@ -203,8 +204,7 @@ position: absolute;
 }
 //bookmarks new page
 .main-background-image {
-  background-image: url(https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2656&q=80
-  );
+  background-image: url(https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80);
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -212,13 +212,15 @@ position: absolute;
 
 .header {
   padding-top: 5px;
+  margin-top: 10px;
   padding-left: 20px;
   display: block;
   width: 1280px;
-  height: 80px;
+  height: 100px;
   align-items: center;
   box-shadow: 0px 1px 5px #555;
   background-color: rgba(255, 255, 255, .2);
+
 }
 
 .header h2 {
@@ -241,11 +243,17 @@ position: absolute;
   background-color: black;
   border: 1px solid white;
   opacity: 0.7;
-
+  margin-left: 300px;
+  margin-top: 45px;
 }
 .main-body {
   color: black;
   font-family: 'Source Serif 4', serif;
+  padding-top: 15px;
+  padding-left: 40px;
+}
+.comment-box{
+  padding-left: 150px;
 }
 .movie-dropdown {
   position: relative;
@@ -265,6 +273,7 @@ textarea {
   font-size: 14pt;
   font-weight: medium;
   text-decoration: none;
+
 }
 .comment-box label {
   color: white !important;
@@ -274,6 +283,6 @@ textarea {
   display: flex;
 }
 .page-footer {
-  padding-right:20px;
  display:flex;
+ justify-content: center;
 }
